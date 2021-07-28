@@ -24,10 +24,12 @@ jobs:
     - name: Build with Maven
       run: |
         cd xxl-conf-admin
+        pwd
         mvn clean package
     - run: |
         pwd
         ls -R
+        cd xxl-conf-admin
     - name: Upload
       uses: actions/upload-artifact@v2
       with:
