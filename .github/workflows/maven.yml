@@ -20,6 +20,7 @@ jobs:
         sed -i "s/\/data/data/g" xxl-conf-admin/src/main/resources/application.properties
         sed -i "s/root_pwd/uu123123/g" xxl-conf-admin/src/main/resources/application.properties
         sed -i "s/8080/8180/g" xxl-conf-admin/src/main/resources/application.properties
+        sed -i "s/127.0.0.1:3306/127.0.0.1:3308/g" xxl-conf-admin/src/main/resources/application.properties
     - name: Set up JDK 8
       uses: actions/setup-java@v2
       with:
