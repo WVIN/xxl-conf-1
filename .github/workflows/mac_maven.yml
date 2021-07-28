@@ -15,7 +15,12 @@ jobs:
       uses: actions/checkout@v2
       with:
         ref: 'v1.6.1'
-        
+    - run: |
+        sed -i "" "s/\/data/data/g" xxl-conf-admin/src/main/resources/logback.xml
+        sed -i "" "s/\/data/data/g" xxl-conf-admin/src/main/resources/application.properties
+        head -5 xxl-conf-admin/src/main/resources/logback.xml
+        echo "----------------------"
+        tail -5 xxl-conf-admin/src/main/resources/application.properties
     - name: Set up JDK 8
       uses: actions/setup-java@v2
       with:
