@@ -28,10 +28,9 @@ jobs:
         mvn clean package
     - run: |
         pwd
-        ls -R
-        cd xxl-conf-admin
+        ls 
     - name: Upload
       uses: actions/upload-artifact@v2
       with:
-        path: ./target/xxl-conf-admin-1.6.1.jar
+        path: xxl-conf-admin/target/xxl-conf-admin-1.6.1.jar
         
