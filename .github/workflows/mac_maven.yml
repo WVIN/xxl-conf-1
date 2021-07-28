@@ -4,11 +4,11 @@
 name: Java Maven in Mac
 
 on:
-  workflow_dispatch:
+  workflow_dispatch
 
 jobs:
   build:
-    runs-on: macos-11
+    runs-on: macos-latest
 
     steps:
     - name: Checkout
